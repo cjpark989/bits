@@ -385,7 +385,7 @@ unsigned float_i2f(int x) {
   if (x & 0x80 && ((f & 1) || ((x & 0x7f) > 0))) {
     f ++;
   }
-  return s  + ((exp + bias) << 23) + frac; //return result
+  return s  + ((exp + bias) << 23) + f; //return result
 }
 /* 
  * float_f2i - Return bit-level equivalent of expression (int) f

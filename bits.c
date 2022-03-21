@@ -363,7 +363,7 @@ unsigned float_twice(unsigned uf) {
  *   Rating: 4
  */
 unsigned float_i2f(int x) {
-  int s = x & (i << 31); //  takes the sign bit of integer to be converted
+  int s = x & (1 << 31); //  takes the sign bit of integer to be converted
   int min = 1 << 31; // initilizes min sign to check for negative int
   int exp = 31; // initialize exponent
   int bias = 127;  // initizliae bias
